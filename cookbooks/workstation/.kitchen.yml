@@ -1,0 +1,17 @@
+---
+driver:
+  name: docker
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.7
+    driver_config:
+      image: xpeppers/chef-essentials
+
+suites:
+  - name: default
+    run_list:
+      - recipe[workstation::default]
+    attributes:
