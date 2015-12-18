@@ -1,13 +1,14 @@
 ---
 driver:
-  name: vagrant
+  name: docker
 
 provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-14.04
-  - name: centos-7.1
+  - name: centos-6.7
+    driver_config:
+      image: xpeppers/chef-essentials
 
 suites:
   - name: default
