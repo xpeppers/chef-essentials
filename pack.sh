@@ -2,4 +2,4 @@
 
 boxFile=$1
 
-zip xpeppers-chef-essentials.zip $1 Vagrantfile start.sh
+zip -rj xpeppers-chef-essentials.zip "$1" README.md start.sh Vagrantfile -x *.DS_Store
